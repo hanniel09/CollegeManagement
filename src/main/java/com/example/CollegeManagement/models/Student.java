@@ -1,6 +1,7 @@
 package com.example.CollegeManagement.models;
 
 
+import com.example.CollegeManagement.dtos.StudentDTO;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -37,6 +38,15 @@ public class Student {
         this.expectedGraduation = expectedGraduation;
         this.courseList = courseList;
     }
+
+    public Student(StudentDTO data) {
+        this.name = data.name();
+        this.age = data.age();
+        this.expectedGraduation = data.expectedGraduation();
+        this.courseList = data.courseList();
+    }
+
+
 
     public Long getStudentId() {
         return studentId;
