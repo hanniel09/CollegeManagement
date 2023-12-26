@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
-    List<Course> findCourses(List<Course> courseList);
+//    List<Course> findCourses(List<Course> courseList);
 }
